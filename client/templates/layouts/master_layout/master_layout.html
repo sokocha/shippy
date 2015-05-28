@@ -4,7 +4,9 @@
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
             <span class="sr-only">Toggle navigation</span>
-            <i class="fa fa-bars"></i>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#"><i class="fa fa-truck"></i> Shippy</a>
         </div>
@@ -12,8 +14,8 @@
           <ul class="nav navbar-nav navbar-right">
               <li>{{#linkTo route="home"}}<i class="fa fa-home"></i> Home{{/linkTo}}</li>
               {{#if currentUser}}
-              <li>{{#linkTo route="insertItem"}}<i class="fa fa-plus "></i>{{/linkTo}}</li>
-              <li>{{#linkTo route="itemsList"}}<i class="fa fa-list-ul"></i>{{/linkTo}}</li>
+              <li>{{#linkTo route="insertItem"}}<i class="fa fa-plus "></i> Send{{/linkTo}}</li>
+              <li>{{#linkTo route="itemsList"}}<i class="fa fa-list-ul"></i> History{{/linkTo}}</li>
               {{/if}}
               <li><div class="nav navbar-nav navbar-right">{{>loginButtons}}</div></li>
           </ul>
@@ -22,6 +24,8 @@
   </nav>
 
   <div class="container">
+    <hr>
+    <hr>
     {{> yield}}
   </div>
   <nav class="navbar navbar-default navbar-fixed-bottom">
