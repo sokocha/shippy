@@ -1,3 +1,4 @@
 <template name="InsertItem">
-  <h1>Find me in app/client/templates/insert_item/insert_item</h1>
+  <h1>Send New Item</h1>
+  {{> quickForm collection="Items" id="insertItemForm" type="insert" omitFields="createdBy" buttonContent="Ready For Pickup"}}
 </template>
