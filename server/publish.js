@@ -3,3 +3,6 @@
  *  this.ready();
  * });
  */
+ Meteor.publish('items', function(userId) {
+  return Items.find({createdBy: userId});
+ });
