@@ -1,3 +1,40 @@
 <template name="ItemList">
-  <h1>Find me in app/client/templates/item_list/item_list</h1>
+  <h1>Shippy History</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Dropoff</th>
+        <th>Driver</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each items}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{dropoff}}</td>
+          <td>{{driver}}</td>
+          <td>
+            {{#if notPickedUp}}
+              <span class="label label-danger">{{status}}</span>
+            {{/if}}
+
+            {{#if pickedUp}}
+              <span class="label label-warning">{{status}}</span>
+            {{/if}}
+
+            {{#if delivered}}
+              <span class="label label-success">{{status}}</span>
+            {{/if}}
+          </td>
+          <td>
+            {{#linkTo route="editItem"}}
+              <i class="fa fa-pencil-square-o"></i>
+            {{/linkTo}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
 </template>

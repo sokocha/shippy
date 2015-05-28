@@ -8,6 +8,27 @@ Template.ItemList.events({
 /* ItemList: Helpers */
 /*****************************************************************************/
 Template.ItemList.helpers({
+  items: function() {
+    return Items.find();
+  },
+  notPickedUp: function() {
+    if (this.status === "notPickedUp")
+      return true;
+    else
+      return false;
+  },
+  pickedUp: function() {
+    if (this.status === "pickedUp")
+      return true;
+    else
+      return false;
+  },
+  delivered: function() {
+    if (this.status === 'delivered')
+      return true;
+    else
+      return false;
+  }
 });
 
 /*****************************************************************************/

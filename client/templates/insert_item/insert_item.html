@@ -1,4 +1,4 @@
 <template name="InsertItem">
-  <h1>Send New Item</h1>
-  {{> quickForm collection="Items" id="insertItemForm" type="insert" omitFields="createdBy" buttonContent="Ready For Pickup"}}
+  <h1>Send Something</h1>
+  {{> quickForm collection="Items" id="insertItemForm" type="insert" omitFields="createdBy, driver, status" buttonContent="All Set"}}
 </template>

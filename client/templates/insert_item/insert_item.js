@@ -21,3 +21,7 @@ Template.InsertItem.rendered = function () {
 
 Template.InsertItem.destroyed = function () {
 };
+
+AutoForm.addHooks(null, function () {
+  return Router.go('itemList');
+});

@@ -14,7 +14,7 @@
           <ul class="nav navbar-nav navbar-right">
               <li>{{#linkTo route="home"}}<i class="fa fa-home"></i> Home{{/linkTo}}</li>
               {{#if currentUser}}
-              <li>{{#linkTo route="insertItem"}}<i class="fa fa-plus "></i> Send{{/linkTo}}</li>
+              <li>{{#linkTo route="insertItem"}}<i class="fa fa-truck "></i> Send{{/linkTo}}</li>
               <li>{{#linkTo route="itemList"}}<i class="fa fa-list-ul"></i> History{{/linkTo}}</li>
               {{/if}}
               <li><div class="nav navbar-nav navbar-right">{{>loginButtons}}</div></li>
@@ -28,12 +28,12 @@
     <hr>
     {{> yield}}
   </div>
-  <nav class="navbar navbar-default navbar-fixed-bottom">
+ <!--  <nav class="navbar navbar-default navbar-fixed-bottom">
       <div class="container">
         <ul class="nav navbar-nav navbar-right">
             <li>Built with Meteor</li>
         </ul>
       </div>
-  </nav>
+  </nav> -->
   
 </template>
